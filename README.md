@@ -1,7 +1,7 @@
 # Yakumi
 Label RecyclerView
 
-<img src="https://github.com/sobaya-0141/Yakumi/blob/images/yakumi.gif" width="144" height="256" />
+<img src="https://user-images.githubusercontent.com/45986582/60495400-ab7f3900-9ceb-11e9-9e69-964ff6238d83.gif" width="288" height="512" />
 
 # DownLoad
 ```
