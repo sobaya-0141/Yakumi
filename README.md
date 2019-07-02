@@ -39,20 +39,31 @@ Add Layout Yakumi
 
 Yakumi#setRecyclerView
 ```
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
 
-        with (mainRecycler) {
-            adapter = SampleAdapter()
-            layoutManager = LinearLayoutManager(this@MainActivity)
+    with (mainRecycler) {
+        adapter = SampleAdapter()
+        layoutManager = LinearLayoutManager(this@MainActivity)
 //            layoutManager = GridLayoutManager(this@MainActivity, 2)
-            setHasFixedSize(true)
+        setHasFixedSize(true)
 
-            mainYakumi.setRecyclerView(this)
-        }
+        mainYakumi.setRecyclerView(this)
     }
+}
 ```
+
+RecyclerView.Adapter
+implements YakumiAdapter
+```
+class SampleAdapter : RecyclerView.Adapter<ViewHolder>(), Yakumi.YakumiAdapter {
+```
+
+override setYakumiText
+'''
+override fun setYakumiText(position: Int) = position.toString()
+'''
 
 # License
 ```
