@@ -26,8 +26,8 @@ publish {
     userOrg = 'sobaya-0141'
     groupId = 'sobaya.app.yakumi'
     artifactId = 'yakumi'
-    publishVersion = '0.1.0'
-    desc = 'mlkit face'
+    publishVersion = '1.0.0'
+    desc = 'label recyclerview'
     website = 'https://github.com/sobaya-0141/Yakumi'
     repoName = 'yakumi'
 }
