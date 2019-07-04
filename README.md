@@ -37,6 +37,14 @@ Add Layout Yakumi
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
+add more parameter
+```
+<sobaya.app.yakumi.Yakumi
+        app:yakumiTextSize="14sp"
+        app:yakumiBackRes="@drawable/hukidasi"
+        app:yakumiTextColor="@android:color/holo_blue_bright"
+```
+
 Yakumi#setRecyclerView
 ```
 override fun onCreate(savedInstanceState: Bundle?) {
