@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Yakumi">
+        <attr name="yakumiTextColor" format="color"/>
+        <attr name="yakumiTextSize" format="dimension"/>
+        <attr name="yakumiBackRes" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -9,13 +9,19 @@
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/mainRecycler"/>
     <sobaya.app.yakumi.Yakumi
+            app:yakumiTextSize="14sp"
+            app:yakumiBackRes="@drawable/hukidasi"
+            app:yakumiTextColor="@android:color/holo_blue_bright"
             android:id="@+id/mainYakumi"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="@+id/mainRecycler" app:layout_constraintTop_toTopOf="@+id/mainRecycler"
+            app:layout_constraintEnd_toEndOf="@+id/mainRecycler"
+            app:layout_constraintTop_toTopOf="@+id/mainRecycler"
             app:layout_constraintBottom_toBottomOf="@+id/mainRecycler"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,14 +4,17 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.yakumi_main.view.*
+import kotlinx.android.synthetic.main.yakumi_main.view.yakumiText
 
 class Yakumi @JvmOverloads constructor(
     context: Context,
@@ -37,6 +40,17 @@ class Yakumi @JvmOverloads constructor(
 
         orientation = HORIZONTAL
         clipChildren = false
+        val ta = context.obtainStyledAttributes(attrs, R.styleable.Yakumi)
+        val textColor = ta.getColor(R.styleable.Yakumi_yakumiTextColor, Color.WHITE)
+        val textSize = ta.getDimension(R.styleable.Yakumi_yakumiTextSize, resources.getDimension(R.dimen.text_size))
+        val resourceId = ta.getResourceId(R.styleable.Yakumi_yakumiBackRes, R.drawable.background_text)
+        val backDrawable = ContextCompat.getDrawable(context, resourceId)
+
+        yakumiText.also {
+            it.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
+            it.setTextColor(textColor)
+            it.background = backDrawable
+        }
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
